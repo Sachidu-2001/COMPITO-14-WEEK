@@ -14,18 +14,11 @@ using BackEndProjectW1.Moduls;
 
     Console.WriteLine("Inserisci Nome");
     contribuente.Nome = Console.ReadLine();
-while(contribuente.Nome == null &&  contribuente.Nome == "" & contribuente.Nome == " ")
-{
-    Console.WriteLine("Il nome non è corretto");
-    Console.WriteLine("Inserisci Nome");
-
-    contribuente.Nome = Console.ReadLine();
-}
 
     Console.WriteLine("Inserisci Cognome");
     contribuente.Cognome = Console.ReadLine();
 
-Console.WriteLine("Inserisci Sesso (inserire se Maschio 'M', e femmina 'F'")
+Console.WriteLine("Inserisci Sesso (inserire se Maschio 'M', e femmina 'F'");
     contribuente.Sesso = Console.ReadLine();
 
 
@@ -51,6 +44,13 @@ Console.WriteLine($"Sesso:{contribuente.Sesso}");
     Console.WriteLine($"nato il {contribuente.DataNascita}");
     Console.WriteLine($"residente in {contribuente.ComuneResidenza}");
     Console.WriteLine($"codice fiscale: {contribuente.CodiceFiscale}");
-    Console.WriteLine($"Reddito dichiarato: € {contribuente.RedditoAnnuale}");
-    Console.WriteLine($"IMPOSTA DA VERSARE: € {ImpostaDaVersare}");
+    Console.WriteLine($"Reddito dichiarato: Euro {contribuente.RedditoAnnuale}");
+    Console.WriteLine($"IMPOSTA DA VERSARE: Euro {ImpostaDaVersare}");
+
+
+Console.WriteLine("");
+Console.WriteLine("");
+Console.WriteLine("");
+Console.WriteLine("");
+Console.WriteLine("Grazie e Arrivederci");
 
