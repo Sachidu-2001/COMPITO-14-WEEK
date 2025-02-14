@@ -17,7 +17,7 @@ namespace BackEndProjectW1.Moduls
         public int RedditoAnnuale { get; set; } = 0;
 
 
-        public  static decimal CalcolaImposta(int RedditoAnnuale) 
+        public  static decimal CalcolaImposta( int RedditoAnnuale) 
         {
             {
                 decimal ImpostaDovuta = 0;

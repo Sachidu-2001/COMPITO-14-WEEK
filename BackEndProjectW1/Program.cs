@@ -31,8 +31,7 @@ using BackEndProjectW1.Moduls;
     Console.WriteLine("Inserisci il Reddito Annuale");
     contribuente.RedditoAnnuale = int.Parse(Console.ReadLine());
 
-
-    //decimal ImpostaDaVersare = contribuente.CalcolaImposta();
+    decimal ImpostaDaVersare = Contribuente.CalcolaImposta(contribuente.RedditoAnnuale);
 
     Console.WriteLine("======================================");
     Console.WriteLine("CALCOLO DELL'IMPOSTA DA VERSARE");
@@ -41,5 +40,5 @@ using BackEndProjectW1.Moduls;
     Console.WriteLine($"residente in {contribuente.ComuneResidenza}");
     Console.WriteLine($"codice fiscale: {contribuente.CodiceFiscale}");
     Console.WriteLine($"Reddito dichiarato: €{contribuente.RedditoAnnuale}");
-   //Console.WriteLine($"IMPOSTA DA VERSARE: €{ImpostaDaVersare}");
+    Console.WriteLine($"IMPOSTA DA VERSARE: €{ImpostaDaVersare}");
 
