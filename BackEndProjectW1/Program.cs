@@ -25,7 +25,7 @@ while(contribuente.Nome == null &&  contribuente.Nome == "" & contribuente.Nome 
     Console.WriteLine("Inserisci Cognome");
     contribuente.Cognome = Console.ReadLine();
 
-Console.WriteLine("Inserisci il tuo Sesso (inserire se Maschio 'M', e femmina 'F'")
+Console.WriteLine("Inserisci Sesso (inserire se Maschio 'M', e femmina 'F'")
     contribuente.Sesso = Console.ReadLine();
 
 
