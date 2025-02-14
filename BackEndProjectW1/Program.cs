@@ -14,9 +14,20 @@ using BackEndProjectW1.Moduls;
 
     Console.WriteLine("Inserisci Nome");
     contribuente.Nome = Console.ReadLine();
+while(contribuente.Nome == null &&  contribuente.Nome == "" & contribuente.Nome == " ")
+{
+    Console.WriteLine("Il nome non è corretto");
+    Console.WriteLine("Inserisci Nome");
+
+    contribuente.Nome = Console.ReadLine();
+}
 
     Console.WriteLine("Inserisci Cognome");
     contribuente.Cognome = Console.ReadLine();
+
+Console.WriteLine("Inserisci il tuo Sesso (inserire se Maschio 'M', e femmina 'F'")
+    contribuente.Sesso = Console.ReadLine();
+
 
 
     Console.WriteLine("Inserisci Data di Nascita 31/12/1999");
@@ -36,9 +47,10 @@ using BackEndProjectW1.Moduls;
     Console.WriteLine("======================================");
     Console.WriteLine("CALCOLO DELL'IMPOSTA DA VERSARE");
     Console.WriteLine($"Contribuente: {contribuente.Nome} {contribuente.Cognome}");
+Console.WriteLine($"Sesso:{contribuente.Sesso}");
     Console.WriteLine($"nato il {contribuente.DataNascita}");
     Console.WriteLine($"residente in {contribuente.ComuneResidenza}");
     Console.WriteLine($"codice fiscale: {contribuente.CodiceFiscale}");
-    Console.WriteLine($"Reddito dichiarato: €{contribuente.RedditoAnnuale}");
-    Console.WriteLine($"IMPOSTA DA VERSARE: €{ImpostaDaVersare}");
+    Console.WriteLine($"Reddito dichiarato: € {contribuente.RedditoAnnuale}");
+    Console.WriteLine($"IMPOSTA DA VERSARE: € {ImpostaDaVersare}");
 
