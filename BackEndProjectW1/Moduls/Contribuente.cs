@@ -17,42 +17,40 @@ namespace BackEndProjectW1.Moduls
         public int RedditoAnnuale { get; set; } = 0;
 
 
-        public decimal CalcolaImposta()
+        public  static decimal CalcolaImposta(int RedditoAnnuale) 
         {
+            {
+                decimal ImpostaDovuta = 0;
 
-            decimal Imposta = 0;
-            decimal ImpostaDovuta = Imposta;
+                if (RedditoAnnuale == 0)
+                {
+                    return ImpostaDovuta;
+                }
+                else if (RedditoAnnuale > 0 && RedditoAnnuale <= 15000)
+                {
+                    ImpostaDovuta += RedditoAnnuale * 0.23m;
+                }
+                else if (RedditoAnnuale > 15000 && RedditoAnnuale <= 28000)
+                {
+                    ImpostaDovuta += 3450 + ((RedditoAnnuale - 15000) * 0.27m);
+                }
+                else if (RedditoAnnuale > 28000 && RedditoAnnuale <= 55000)
+                {
+                    ImpostaDovuta += 6960 + ((RedditoAnnuale - 28000) * 0.38m);
+                }
+                else if (RedditoAnnuale > 55000 && RedditoAnnuale <= 75000)
+                {
+                    ImpostaDovuta += 17220 + ((RedditoAnnuale - 55000) * 0.41m);
+                }
+                else if (RedditoAnnuale > 75000)
+                {
+                    ImpostaDovuta += 25420 + ((RedditoAnnuale - 75000) * 0.43m);
+                }
 
-
-            if (RedditoAnnuale == 0)
-            {
-                return Imposta;
-            }
-            else if (RedditoAnnuale > 0 && RedditoAnnuale <= 15000)
-            {
-                Imposta = RedditoAnnuale * 0.23m;
-                return ImpostaDovuta;
-            }
-            else if (RedditoAnnuale > 15000 && RedditoAnnuale <= 28000)
-            {
-                Imposta = 3450 + ((RedditoAnnuale - 15000) * 0.27m);
-                return ImpostaDovuta;
-            }
-            else if (RedditoAnnuale > 28000 && RedditoAnnuale <= 55000)
-            {
-                Imposta = 6960 + ((RedditoAnnuale - 28000) * 0.38m);
-                return ImpostaDovuta;
-            }
-            else if (RedditoAnnuale > 55000 && RedditoAnnuale <= 75000)
-            {
-                Imposta = 17220 + ((RedditoAnnuale - 55000) * 0.41m);
-                return ImpostaDovuta;
-            }
-            else if (RedditoAnnuale > 75000)
-            {
-                Imposta = 25420 + ((RedditoAnnuale - 75000 * 0.43m));
                 return ImpostaDovuta;
             }
         }
+
+       
     }
 }
